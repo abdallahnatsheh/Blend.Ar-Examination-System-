@@ -1,0 +1,299 @@
+html {
+  overflow-y: scroll;
+  /*background: #333;*/
+}
+header {
+  background-color: #333;
+}
+body {
+  /*background-color: #f2eee2;*/
+  background-image: -webkit-radial-gradient(#f2eee2, #f0c75e);
+  background-image: -moz-radial-gradient(#f2eee2, #f0c75e);
+  background-image: -o-radial-gradient(#f2eee2, #f0c75e);
+  background-image: radial-gradient(#f2eee2, #c3d1ea61);
+  font-size: 25px;
+  font-family: sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.question {
+  position: static;
+  border: 3.5px solid #ffd45a;
+  background-color: #333;
+  border-style: double;
+  font-weight: 600;
+  color: #f2eee2;
+  text-align: right;
+}
+.answers {
+  position: static;
+  border: 3.5px solid #ffd45a;
+  border-style: double;
+  font-weight: 600;
+  margin-bottom: 50px;
+  background-color: #333;
+  color: #f2eee2;
+  text-align: right;
+}
+.answers label {
+  display: block;
+  /* text-align: right;*/
+}
+.answers label:hover {
+  color: #ffd45a;
+}
+#submit {
+  font-family: sans-serif;
+  font-size: 25px;
+  background-color: #ffbf00;
+  color: #353131;
+  border: 0px;
+  border-radius: 8px;
+  padding: 13px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+#submit:hover {
+  background-color: #353131;
+  color: #ffd45a;
+}
+
+#send {
+  font-family: sans-serif;
+  font-size: 25px;
+  background-color: #ffbf00;
+  color: #353131;
+  border: 0px;
+  border-radius: 8px;
+  padding: 13px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+#send:hover {
+  background-color: #353131;
+  color: #ffd45a;
+}
+
+#file {
+  font-family: sans-serif;
+  font-size: 25px;
+  background-color: #ffbf00;
+  color: #353131;
+  border: 0px;
+  border-radius: 8px;
+  padding: 13px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+#file:hover {
+  background-color: #353131;
+  color: #ffd45a;
+}
+
+
+
+
+
+#admin-next-exam{
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #279;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#admin-next-exam:hover{
+	background-color: #38a;
+}
+#numbers-of-ques{
+  position: left ;
+}
+.admin-btn-group button {
+  background-color: #333333; 
+  border: 1px solid black; 
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 10%; /* Set a width if needed */
+}
+
+.admin-btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.admin-btn-group button:hover {
+  background-color: gray;
+}
+#admin-logout:hover {
+  background-color: red;
+}
+#admin-save-exam-btn:hover {
+  background-color: #003399;
+}
+
+
+form {font-family: Arial, Helvetica, sans-serif;}
+
+/* The popup form - hidden by default */
+.form-popup {
+  box-sizing: border-box;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 9;
+}
+
+.admin-form-popup{
+  box-sizing: border-box;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 150px;
+  bottom: 550px;
+  z-index: 9;
+  height:100px;
+}
+.user-form-popup {
+  box-sizing: border-box;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 150px;
+  bottom: 550px;
+  z-index: 9;
+  height:100px;
+}
+/* Add styles to the form container */
+.form-container {
+  max-width: 400px;
+  padding: 5px;
+  background-color: #fcffbc;
+  height:600px;
+   overflow:auto;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=text] {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #fdfdfd;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #00af07;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+   display: inline-block;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  margin-right:-20px;
+margin-top:-20px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 17px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ffbf00;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: brown;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+#btn_ar {
+  background: #ffbf00;
+  color: black;
+  outline: none;
+  border-radius: 3px;
+}
+#btn_ar :hover {
+  background-color: #333;
+  color: white;
+}
+#btn_en {
+  background: #ffbf00;
+  color: black;
+  outline: none;
+  border-radius: 3px;
+}
+#btn_en :hover {
+  background-color: #333;
+  color: white;
+}
+#btn_he {
+  background: #ffbf00;
+  color: black;
+  outline: none;
+  border-radius: 3px;
+}
+#btn_he :hover {
+  background-color: #333;
+  color: white;
+}
+
+#btn_en:hover {
+  background-color: #353131;
+  color: #ffd45a;
+}
+
+
+#btn_he:hover {
+  background-color: #353131;
+  color: #ffd45a;
+}
+
+#btn_ar:hover {
+  background-color: #353131;
+  color: #ffd45a;
+}

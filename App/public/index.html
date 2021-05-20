@@ -1,0 +1,92 @@
+<!------------------------------------------------------------------------------------------------------------>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!------------------------------------------------------------------------------------------------------------>    <link rel="stylesheet" href="./css/styles.css"/>
+    <link rel="shortcut icon" href="./css/blender.PNG" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Blend.Ar</title>
+</head>
+<!------------------------------------------------------------------------------------------------------------>
+<header>
+</header> 
+<!------------------------------------------------------------------------------------------------------------>
+<body>
+<!------------------------------------------------------------------------------------------------------------>
+  <div class="topnav" id="myTopnav">
+    <a class="navbar-brand" href="https://www.blendarabic.com/" target = "_blank">
+      <div class="logo-image">
+            <img src="./css/rsz_bl.png" class="img-fluid">            
+      </div>
+  </a>
+    <a href="https://www.blendarabic.com/" target = "_blank">דף הבית</a>
+    <a href="https://www.blendarabic.com/blank-3" target = "_blank">קורסים לארגונים</a>
+    <a href="https://www.blendarabic.com/blend-in-abu-ghosh" target = "_blank">Blend in Abu-Ghosh</a>
+    <a href="https://www.blendarabic.com/blank-1" target = "_blank">להכיר את בלנדר</a>
+    <a href="https://www.blendarabic.com/blank-2" target = "_blank" class="fa fa-envelope" > צרו קשר</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>  
+<!------------------------------------------------------------------------------------------------------------>
+<div class="form">   
+    <ul class="tab-group">
+        <button  id = "signButton"  onclick="window.location.href='signUp.html'">Sign Up</button>
+        <button  id = "signButton"  onclick=" window.location.href='index.html'"></a>Sign In</button> 
+      </ul>    
+<!------------------------------------------------------------------------------------------------------------>
+<div id="login">   
+          <h1>Welcome!</h1>
+          <form action="/" method="GET">
+            <div class="field-wrap">
+            <label>
+            <h2>  Email Address<span class="req">*</span></h2>
+            </label>
+            <input id="emaillo" type="email"required autocomplete="off"/>
+          </div>
+  <!------------------------------------------------------------------------------------------------------------>   
+          <div class="field-wrap">
+            <label>
+             <h2> Enter Your Password<span class="req">*</span></h2>
+            </label>
+            <input id="passwordlo" type="password"required autocomplete="off"/>
+          </div>
+          
+          <p class="forgot" id="forgotPass" onclick="resetPassword(document. getElementById('emaillo').value)"><a href="#">Forgot Password?</a></p>
+          
+          <button id = "signIn" type="button" class="button button-block" onclick="logIn(document. getElementById('emaillo').value, document. getElementById('passwordlo').value)" >Sign In</button>
+          
+          </form>
+</div>
+</div>
+    </div>    
+<!------------------------------------------------------------------------------------------------------------>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+ const firebaseConfig = {
+  apiKey: "apiKey",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>

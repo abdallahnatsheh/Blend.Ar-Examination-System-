@@ -1,0 +1,138 @@
+<!------------------------------------------------------------------------------------------------------------>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel = "stylesheet" type="text/css" href="./css/section2.css"/>
+</head>
+<!------------------------------------------------------------------------------------------------------------>
+<body>
+	<div class="topnav" id="myTopnav">
+		<a class="navbar-brand" href="https://www.blendarabic.com/" target = "_blank">
+		  <div class="logo-image">
+				<img src="./css/rsz_bl.png" class="img-fluid">
+				
+		  </div>
+	  </a>
+		<a href="https://www.blendarabic.com/" target = "_blank">דף הבית</a>
+		<a href="https://www.blendarabic.com/blank-3" target = "_blank">קורסים לארגונים</a>
+		<a href="https://www.blendarabic.com/blend-in-abu-ghosh" target = "_blank">Blend in Abu-Ghosh</a>
+		<a href="https://www.blendarabic.com/blank-1" target = "_blank">להכיר את בלנדר</a>
+		<a href="https://www.blendarabic.com/blank-2" target = "_blank" class="fa fa-envelope" > צרו קשר</a>
+		<a href="section1.html" >מבחן סגור</a>
+		<a href="section2.html">מבחן פתוח</a>
+		<a href="section3.html">הבנת הנשמע-חלק פתוח</a>
+    <a href="section4.html">הבנת הנשמע-חלק סגור</a>
+		<a href="index.html">יציאה</a>
+
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		  <i class="fa fa-bars"></i>
+		</a>
+    </div> 
+<!------------------------------------------------------------------------------------------------------------>
+<div id="language">
+	<button  id = "btn_ar"  onclick="changeAr()">العربية</button>
+	<button  id = "btn_he"  onclick="changeHe()">עברית</button></button>
+	<button  id = "btn_en"  onclick="changeEn()">English</button>
+</div>
+<!------------------------------------------------------------------------------------------------------------>
+  <div>
+		<label class="text" id="username_id" >username</label></br>
+      </div></br>
+<!------------------------------------------------------------------------------------------------------------>
+<div class="admin-btn-group">
+	<button class="open-button" id="admin-logout" onclick="signOut()">יציאה</button>
+	<button class="open-button" id="admin-save-exam-btn">שמור שינויים</button>
+	<button class="open-button" id="admin-edit-ques-btn">ערוך שאלה</button>
+	<button class="open-button" id="admin-del-ques-btn" >מחק שאלה</button>
+ 	<button class="open-button" id="admin-add-ques-btn" >הוסף שאלה</button>
+</div></br>
+<!------------------------------------------------------------------------------------------------------------>
+<div class="form-popup" id="add-ques-form" >
+  <form action="" class="form-container">
+    <h1> ניתן להוסיף שאלה או שדה תשובה או שניהם</h1>
+    <h3> תלחץ על הריבוע כדי להוסיף שדה לפתרון</h3>
+   <h3> אם רוצים רק להוסיף שדה לתשובה אפשר לא להוסיף שאלה</h3>
+   <small>העיקר לבחור משהוא</small>
+    </br></br><label><b>השאלה</b></label>
+    <input type="text" placeholder="Enter Question" name="question" id="add-ques2-input" required>
+    <input type="checkbox" id="add-answer-add"  value="true"><b>הוסף שדה לתשובה</b></input></br></br>
+    <button type="button" class="btn" id="submit-form-add-ques-btn">Submit</button>
+    <button type="button" class="btn cancel" id="close-form-add-ques-btn">Close</button>
+  </form>
+</div>
+<!------------------------------------------------------------------------------------------------------------>
+<div class="form-popup" id="del-ques-form" >
+	<form action="" class="form-container">
+    <h1> מחק שאלה</h1>
+    <label><b>מספר שאלה*</b></label>
+		<input type="text" placeholder="Enter Question number" name="question-num" id="del-ques2-num-input" required>
+		<button type="button" class="btn" id="submit-form-del-ques-btn">Submit</button>
+		<button type="button" class="btn cancel" id="close-form-del-ques-btn">Close</button>
+	</form>
+</div>
+<!------------------------------------------------------------------------------------------------------------>
+<div class="admin-form-popup" id="admin-ques-form" >
+	<form action="" class="form-container">
+		<label><b>חובה לשמור שינויים!</b></label></br>
+		<button type="button" class="btn" id="admin-form-ques-btn">Submit</button>
+		<button type="button" class="btn cancel" id="admin-form-cancel-btn">Close</button>
+	</form>
+</div>
+<!------------------------------------------------------------------------------------------------------------>
+<div class="form-popup" id="edit-ques-form" >
+  <form action="" class="form-container">
+    <h1> ערוך שאלה או הוסף שדה לתשובה</h1>
+    <h3> תלחץ על הריבוע כדי להוסיף שדה לפתרון</h3>
+    <h3> אם רוצים רק להוסיף שדה לתשובה אפשר לא להוסיף שאלה</h3>
+    <small>העיקר לבחור משהוא</small>
+    <label><b>מספר שאלה*</b></label>
+    <input type="text" placeholder="Enter Question number" name="question-num" id="edit-ques2-num-input" required>
+    <label><b>השאלה*</b></label>
+    <input type="text" placeholder="Enter Question" name="question" id="edit-ques2-input" required>
+    <input type="checkbox" id="add-answer-edit"  value="true"><b>הוסף שדה לתשובה</b></input></br></br>
+    <button type="button" class="btn" id="submit-form-edit-ques-btn">Submit</button>
+    <button type="button" class="btn cancel" id="close-form-edit-ques-btn">Close</button>
+  </form>
+</div>
+<!------------------------------------------------------------------------------------------------------------>
+<div  id="quiz"></div>
+<!------------------------------------------------------------------------------------------------------------>
+<button onclick="window.print()" id="submit" >שמור מבחן</button>
+<div id="results"></div>
+<p></p>
+<div id="uploading">
+<input type="file" id="file" accept="pdf/*">
+<progress value="0" max="100" id="uploader">0%</progress>
+<button type="button" onclick="upload()" id="send" > שלח קובץ לבדיקה </button>
+</div>
+<!------------------------------------------------------------------------------------------------------------>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+	 <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+	 <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+	 <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-storage.js"></script>
+	 <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-functions.js"></script>
+<script>
+  // Your web app's Firebase configuration
+ const firebaseConfig = {
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
+};
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src = "./scripts/section2.js"></script>
+<script src="./scripts/index.js"></script>
+</body>
+<!------------------------------------------------------------------------------------------------------------>
+</html>
